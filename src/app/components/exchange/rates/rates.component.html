@@ -1,0 +1,30 @@
+
+  <table class="table col-sm-2 ">
+    <tr id="head">
+        <td>
+          &nbsp;&nbsp;Coin
+        </td>
+        <td>
+          USD
+        </td>
+        <td>
+          EUR
+        </td>
+    </tr>
+  </table>
+<table class="table col-sm-2">
+    <div *ngFor="let crypto of objectKeys(cryptos)">
+      <tr id="coin" (click)="coin(crypto)">
+        <td style="width:100px;">
+          &nbsp;&nbsp;<span>{{ crypto }} </span>
+        </td>
+        <td style="width:100px;">
+          <span>{{ cryptos[crypto].USD | currency:'USD':true }} </span>
+        </td>
+        <td style="width: 100px;">
+          {{ cryptos[crypto].EUR | currency:'EUR':true }}
+        </td>
+      </tr>
+      <!-- <br> -->
+    </div>
+</table>

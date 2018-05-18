@@ -1,0 +1,14 @@
+.table1
+{
+  position:relative;
+  top:5%;
+  width:80%;
+}
+.div_box
+{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #dbdbdb;
+  box-shadow: 4px #dbdbdb;
+}

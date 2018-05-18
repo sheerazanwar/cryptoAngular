@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="fluid-container col-sm-12" style="background:#e8e5e5;">
+  <div class="col-sm-12" style="background:white;">
+    <br>
+    <table class="table table-hover">
+      <tr>
+        <td class="col-sm-1">
+        </td>
+        <td class="col-sm-2">
+          &nbsp;&nbsp;&nbsp;Estimated Value
+          <br>
+          <strong style="font-size:20px;"> 0.01544819 </strong> BTC
+          <br>
+          &nbsp;&nbsp;&nbsp;~<strong style="font-size:18px;"> 175.06 </strong> $
+        </td>
+        <td class="col-sm-2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available
+          <br>
+          <strong style="font-size:20px;color:#12bc12;"> 0.01544819 </strong> BTC
+          <br>
+          &nbsp;&nbsp;&nbsp;~<strong style="font-size:18px;"> 175.06 </strong> $
+        </td>
+        <td class="col-sm-2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In Order
+          <br>
+          <strong style="font-size:20px;color:#ff613a;"> 0.01544819 </strong> BTC
+          <br>
+          &nbsp;&nbsp;&nbsp;~<strong style="font-size:18px;"> 175.06 </strong> $
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-sm-offset-1 col-sm-10" style="margin-top:20px;background:#e8e5e5;height:700px;">
+    <div class="list-group col-sm-2">
+      <a routerLink="/overview" class="list-group-item list-group-item-action ">Overview</a>
+      <a routerLink="/deposit" class="list-group-item list-group-item-action active">Deposit</a>
+      <a routerLink="/withdrawal" class="list-group-item list-group-item-action ">Withdrawal</a>
+      <a routerLink="/openorders" class="list-group-item list-group-item-action ">Open Orders</a>
+      <a routerLink="/tradehistory" class="list-group-item list-group-item-action">Trade History</a>
+    </div>
+    <div class="col-sm-10" style="background:#e8e5e5;">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Deposit</h3>
+        </div>
+        <div class="panel-body" style="height:300px;">
+          <div class="col-sm-4">
+            <select class="form-control" >
+              <option value="SUB" ><img src="../../../../assets/pic/sub.png" style="width:20px;height:20px;">&nbsp;&nbsp;Substratum&nbsp;&nbsp;<em style="color:#919499;font-size:12px;">SUB</em></option>
+              <option value="APPC"><img src="../../../../assets/pic/appc.png" style="width:25px;height:25px;">&nbsp;&nbsp;AppCoins&nbsp;&nbsp;<em style="color:#919499;font-size:12px;">APPC</em></option>
+              <option value="EOS"><img src="../../../../assets/pic/eos.svg" style="width:25px;height:25px;">&nbsp;&nbsp;EOS&nbsp;&nbsp;<em style="color:#919499;font-size:12px;">EOS</em></option>
+            </select>
+          </div>
+          <div scope="col" class="col-sm-4" style="position:relative;top:7px;left:20px;">Available SUB <span style="color:#12bc12">4</span></div>
+          <div scope="col" class="col-sm-4" style="position:relative;top:7px;">In Order SUB <span style="color:#ff613a">4</span></div>
+          <div class="col-sm-12">
+            <br><br>
+            Your <font style="color:red;"> {{coin}}</font> Shares Deposit address：<strong style="font-size:18px;">{{address}}</strong><br>
+            <img src="../../../../assets/pic/qr.png" style="width:150px;height:150px;">
+          </div>
+          <br>
+        </div>
+        <div class="panel-footer">
+          <strong>Tips:</strong>
+          <ul>
+            <li>Coins will be deposited immediately after 30 network confirmation</li>
+            <li>The address is not allowed to deposit other assets other than <font style="color:red;"> {{coin}}</font>, and any other asset deposit will not be recovered</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
